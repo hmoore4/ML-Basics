@@ -29,6 +29,7 @@ fun removei (item, list) =
   (* testing removei() *)
 removei(2, [1,2,3]);
 removei(4, [1,2,3,4,5]);
+removei(10, [1,2,3,4,5]);
 
 
 (* definition of dot() *)
@@ -39,7 +40,15 @@ removei(4, [1,2,3,4,5]);
 	
 	  (* testing dot() *)
 	dot([1.0, 4.0],[2.0, 4.0]);
-	dot([1.0, 2.0, 3.0],[4.0, 5.0, 6.0])
+	dot([1.0, 2.0, 3.0],[4.0, 5.0, 6.0]);
 
 (*definition of istri() *)
-
+	fun istri(num1, num2, num3) = 
+		if num1 andalso num2 < num3 then
+			if num1 + num2 > num3 then true else false;
+		else
+			if num2 and also num3 < num1 then
+				if num2+num2 < num1 then true
+			
+			
+			
