@@ -32,7 +32,14 @@ removei(4, [1,2,3,4,5]);
 
 
 (* definition of dot() *)
-	fun dot ([],[]) = 0
-	| dot(x::l,y::k) = (x*y)::sumlists(L,M); 
+
+	fun dot (L, M) = 
+		if null L then 0.0
+	else (hd L*hd M) + dot(tl L,tl M);
 	
+	  (* testing dot() *)
 	dot([1.0, 4.0],[2.0, 4.0]);
+	dot([1.0, 2.0, 3.0],[4.0, 5.0, 6.0])
+
+(*definition of istri() *)
+
