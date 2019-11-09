@@ -19,17 +19,20 @@
   dup [1,2,3,4];
  
 (* definition of removei() *)
-fun delete (item, list) =
-    case list of
-    []=>[]
-      | xs::ys => if item = xs then delete(item,ys)
-          else xs::delete(item,ys);
-          
-  removei(2, [1,2,3]);
-removei([1,2,3,4,5],4);
 
-fun delete (item, list) =
+fun removei (item, list) =
     case list of
     []=>[]
-      | xs::ys => if item = xs then delete(item,ys)
-          else xs::delete(item,ys)
+    | xs::ys => if item = xs then removei(item,ys)
+          else xs::removei(item,ys);
+          
+  (* testing removei() *)
+removei(2, [1,2,3]);
+removei(4, [1,2,3,4,5]);
+
+
+(* definition of dot() *)
+	fun dot ([],[]) = 0
+	| dot(x::l,y::k) = (x*y)::sumlists(L,M); 
+	
+	dot([1.0, 4.0],[2.0, 4.0]);
